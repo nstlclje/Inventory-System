@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory System</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            font-size: 16px;
+            background-color: #F5F5F5;
+            color: #3F2305;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #3F2305;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"],
+        input[type="checkbox"] {
+            height: 40px;
+            width: 300px;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            border: 1px solid #3F2305;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #DFD7BF;
+            color: #3F2305;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #F2EAD3;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #DFD7BF;
+        }
+
+        th,
+        td {
+            border: 1px solid #3F2305;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .setVisibility {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .tablesSection {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Inventory System</h2>
+    <form action="#" id="inputForm">
+        <p id="usersList"></p>
+        <p>Item: <input type="text" id="item"></p>
+        <p>Quantity: <input type="number" id="quantity"></p>
+        <input type="submit" value="Submit" id="submitButton">
+    </form>
+    <div class="setVisibility">
+        <p>View table (Check the box)<input type="checkbox" id="checkbox"></p>
+    </div>
+    <div class="tablesSection" style="display: none;">
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table content will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <form id="editForm" style="display: none;">
+        <input type="text" id="newText" placeholder="Enter new value">
+        <input type="submit">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
